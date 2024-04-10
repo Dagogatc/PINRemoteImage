@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
   s.license          = 'Apache 2.0'
   s.author           = { "Garrett Moon" => "garrett@pinterest.com" }
   s.source           = { :git => "https://github.com/pinterest/PINRemoteImage.git", :tag => s.version.to_s }
-  s.resource_bundles = {'PINRemoteImage' => ['PrivacyInfo.xcprivacy']}
   s.prefix_header_file = false
   # s.social_media_url = 'https://twitter.com/garrettmoon'
 
@@ -38,6 +37,7 @@ Pod::Spec.new do |s|
     cs.public_header_files = 'Source/Classes/**/*.h'
     cs.exclude_files = 'Source/Classes/PINCache/*.{h,m}', 'Source/Classes/include/PINCache+PINRemoteImageCaching.h'
     cs.frameworks = 'ImageIO', 'Accelerate'
+    cs.resource_bundles = {'PINRemoteImage' => ['PrivacyInfo.xcprivacy']}
   end
   
   s.subspec 'iOS' do |ios|
